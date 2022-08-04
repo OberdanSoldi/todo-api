@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todoDB
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-test-query: select 1
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    defer-datasource-initialization: true
+    database: postgresql
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  server:
+    error:
+      include-message: always
